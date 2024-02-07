@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layouts/header'); -%>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+
+    <!-- Add custom styles for spacing -->
+<!-- Add custom styles for spacing -->
+<style>
+    .custom-section {
+        margin-bottom: 50px !important;
+    }
+
+    .custom-message-container {
+        margin-top: 150px !important; /* Adjust the margin to add more space */
+        text-align: center; /* Center the content */
+    }
+</style>
+
+</head>
+
+<body>
+    <%- include('layouts/navbar'); -%>
+
+    <section class="ftco-section-parallax custom-section">
+        <div class="parallax-img d-flex align-items-center">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-7 text-center heading-section heading-section-white ftco-animate custom-message-container">
+                        <h2 class="mx-auto">Wish you the best of luck in your career search!</h2>
+                        <p>Your profile has been successfully submitted!</p>
+                        <div class="row d-flex justify-content-center mt-4 mb-4">
+                            <div class="col-md-12">
+                    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START footer -->
+    <%- include('layouts/footer'); -%>
+    <!-- END footer -->
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+        </svg>
+    </div>
+
+    <!-- START scripts -->
+    <%- include('layouts/scripts'); -%>
+    <!-- END scripts -->
+
+</body>
+
+</html>

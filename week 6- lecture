@@ -1,0 +1,31 @@
+Week-06 Lecture
+Date: 21/11/2023
+
+## Agenda:
+-Model
+-Mongoose
+-Controllers
+
+### Mongoose 
+
+**Step-01** Mongoose Installation
+> npm install mongoose --save
+
+**Step-02** Import mongoose
+
+```js
+const mongoose = require(`mongoose`)
+```
+**Step-03** Connect with mongodb
+
+```js
+mongoose.connect('mongodb://localhost/shema', {userNewUrlParser: true});
+```
+
+**Step-04** Create a folder called 'models'
+
+**Step-05** Create a model fo each collection
+
+**Step-04** 
+
+**Step-04** 

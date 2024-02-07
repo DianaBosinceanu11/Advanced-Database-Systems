@@ -1,0 +1,18 @@
+---
+week-04 Lecture: Activity-01
+Date: 07/11/2023
+---
+
+## Agenda:
+- Intro to MVC
+- NodeJS installarion
+- VS Code instalation
+- Creating first Node JS server
+
+
+### Creating First NodeJs Server
+**Step-01:** Create a folder
+**Step-02:** Use the nmp init command
+        '''js
+        > npm init -y
+        '''

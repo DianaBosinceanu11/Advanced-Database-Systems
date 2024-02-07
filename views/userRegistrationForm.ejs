@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <%- include('layouts/header');-%>
+  </head>
+
+  <body>
+    <!-- START navbar -->
+    <%- include('layouts/navbar'); -%>
+    <!-- END navbar -->
+    
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+          <div class="row no-gutters slider-text align-items-end justify-content-start">
+              <div class="col-md-12 ftco-animate text-center mb-5">
+                  <p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact</span></p>
+                  <h1 class="mb-3 bread">Are you searching for a Job?</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <section class="ftco-section contact-section bg-light">
+      <div class="container">
+          <div class="row d-flex mb-5 contact-info">
+              <div class="col-md-12 mb-4">
+                  <h2 class="h3">Sign Up</h2>
+              </div>
+          </div>
+
+          <div class="row justify-content-center">
+              <div class="col-md-6">
+                
+                  <form action="/registerUser" method="post" class="contact-form">
+
+                      <div class="form-group">
+                          <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+                      </div>
+
+                      <div class="form-group">
+                          <input type="email" id="email" name="email" class="form-control" placeholder="Your Email">
+                      </div>
+
+                      <div class="form-group">
+                          <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                      </div>
+
+                      <div class="form-group">
+                          <input type="password" id="repeatPassword" name="repeatPassword" class="form-control" placeholder="Repeat password">
+                      </div>
+
+                      <div class="form-group text-center">
+                          <input type="submit" value="Create Account" class="btn btn-primary">
+                      </div>
+
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+    <!-- START footer -->
+    <%- include('layouts/footer'); -%>
+    <!-- END footer -->
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <!-- START scripts -->
+    <%- include('layouts/scripts'); -%>
+    <!-- END scripts -->
+    
+  </body>
+</html>

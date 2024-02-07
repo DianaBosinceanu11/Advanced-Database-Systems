@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container-fluid px-md-4	">
+    <a class="navbar-brand" href="/">Skillhunt</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+
+        <% if (loggedIn) { %>
+        <li class="nav-item"><a href="/newpostForm" class="nav-link">Post a Job</a></li>
+
+
+        <li class="nav-item"><a href="/yourjobs" class="nav-link">Your Job Posts</a></li>
+
+
+        <li class="nav-item"><a href="/newCV" class="nav-link">Upload your CV</a></li>
+
+        <li class="nav-item"><a href="/candidates" class="nav-link">Canditates</a></li>
+        <% } %>
+
+        <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        <li class="nav-item cta cta-colored"><a href="/joboffers" class="nav-link">Job Offers</a></li>
+
+        <% if (!loggedIn) { %>
+        <li class="nav-item cta mr-md-1"><a href="/loginForm" class="nav-link">Log in</a></li>
+
+        <li class="nav-item cta mr-md-1"><a href="/userRegistrationForm" class="nav-link">Sign Up</a></li>
+        <% } %>
+
+
+        <% if (loggedIn) { %>
+        <li class="nav-item"><a href="/logout" class="nav-link">Log Out</a></li>
+        <% } %>
+
+      </ul>
+
+
+  </div>
+</nav>
+

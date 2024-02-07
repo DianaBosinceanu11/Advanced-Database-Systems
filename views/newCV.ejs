@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('layouts/header');-%>
+  </head>
+  <body>
+    
+    <!-- START navbar -->
+    <%- include('layouts/navbar'); -%>
+    <!-- END navbar -->
+    
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+          <div class="col-md-12 ftco-animate text-center mb-5">
+          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Upload your CV/span></p>
+            <h1 class="mb-3 bread">Are you searching for a Job? Upload your CV</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+		<section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+       
+          <div class="col-md-12 col-lg-8 mb-5">
+          
+
+
+
+            <form action="/addNewCV" method="post" class="p-5 bg-white">
+              
+            
+ 
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>First Name</h3></div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <input type="text" id="fname" name="fname" class="form-control" placeholder="Plese enter your first name">
+                </div>
+              </div>
+
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>Last Name</h3></div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <input type="text" id="lname" name="lname" class="form-control" placeholder="Please enter your last name">
+                </div>
+              </div>
+
+
+
+
+
+              <!-- START -->
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>Location</h3></div>
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <!-- Dropdown for country -->
+                  <select id="country" name="country" class="form-control">
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Kosovo">Kosovo</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russia">Russia</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <!-- MORE OPTIONS CAN BE ADDED -->
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <!-- Text input for city -->
+                  <input type="text" id="city" name="city" class="form-control" placeholder="City">
+                </div>
+              </div>
+              <!-- END -->
+
+
+
+
+              <!-- START -->
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>Phone Number</h3></div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                  <!-- Add a dropdown for country code -->
+                  <select id="countryCode" name="countryCode" class="form-control">
+                    <!-- Add European country code options -->
+                    <option value="+44">+44 (UK)</option>
+                    <option value="+355">+355 (Albania)</option>
+                    <option value="+376">+376 (Andorra)</option>
+                    <option value="+374">+374 (Armenia)</option>
+                    <option value="+43">+43 (Austria)</option>
+                    <option value="+994">+994 (Azerbaijan)</option>
+                    <option value="+375">+375 (Belarus)</option>
+                    <option value="+32">+32 (Belgium)</option>
+                    <option value="+387">+387 (Bosnia and Herzegovina)</option>
+                    <option value="+359">+359 (Bulgaria)</option>
+                    <option value="+385">+385 (Croatia)</option>
+                    <option value="+357">+357 (Cyprus)</option>
+                    <option value="+420">+420 (Czech Republic)</option>
+                    <option value="+45">+45 (Denmark)</option>
+                    <option value="+372">+372 (Estonia)</option>
+                    <option value="+358">+358 (Finland)</option>
+                    <option value="+33">+33 (France)</option>
+                    <option value="+995">+995 (Georgia)</option>
+                    <option value="+49">+49 (Germany)</option>
+                    <option value="+30">+30 (Greece)</option>
+                    <option value="+36">+36 (Hungary)</option>
+                    <option value="+354">+354 (Iceland)</option>
+                    <option value="+353">+353 (Ireland)</option>
+                    <option value="+39">+39 (Italy)</option>
+                    <option value="+377">+377 (Monaco)</option>
+                    <option value="+383">+383 (Kosovo)</option>
+                    <option value="+371">+371 (Latvia)</option>
+                    <option value="+423">+423 (Liechtenstein)</option>
+                    <option value="+370">+370 (Lithuania)</option>
+                    <option value="+352">+352 (Luxembourg)</option>
+                    <option value="+356">+356 (Malta)</option>
+                    <option value="+373">+373 (Moldova)</option>
+                    <option value="+382">+382 (Montenegro)</option>
+                    <option value="+31">+31 (Netherlands)</option>
+                    <option value="+47">+47 (Norway)</option>
+                    <option value="+48">+48 (Poland)</option>
+                    <option value="+351">+351 (Portugal)</option>
+                    <option value="+40">+40 (Romania)</option>
+                    <option value="+7">+7 (Russia)</option>
+                    <option value="+378">+378 (San Marino)</option>
+                    <option value="+381">+381 (Serbia)</option>
+                    <option value="+421">+421 (Slovakia)</option>
+                    <option value="+386">+386 (Slovenia)</option>
+                    <option value="+34">+34 (Spain)</option>
+                    <option value="+46">+46 (Sweden)</option>
+                    <option value="+41">+41 (Switzerland)</option>
+                    <option value="+90">+90 (Turkey)</option>
+                    <option value="+380">+380 (Ukraine)</option>
+
+                    <!-- MORE OPTIONS CAN BE ADDED -->
+                  </select>
+                </div>
+                <div class="col-md-9 mb-3 mb-md-0">
+                  <!-- Add an input for the phone number -->
+                  <input type="text" id="phone" name="phone" class="form-control" placeholder="e.g., 0740000000">
+                </div>
+              </div>
+              <!-- END -->
+
+
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>E-mail Address</h3></div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <input type="email" id="email" name="email" class="form-control" placeholder="e.g., your.email@gmail.com" required>
+                </div>
+              </div>
+              
+
+
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>Current Job</h3></div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <input type="text" id="currentjob" name="currentjob" class="form-control" placeholder="Which is the title of your current role/job?">
+                </div>
+              </div>
+
+
+              <div class="row form-group mb-4">
+                <div class="col-md-12">
+                  <h3>About</h3>
+                </div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <textarea id="summary" name="summary" class="form-control" placeholder="Tell us about yourself" rows="10"></textarea>
+                </div>
+              </div>
+              
+
+              
+              <!-- <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>Upload CV</h3></div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <input type="file" id="myfile" name="myfile" class="form-control">
+                </div>
+              </div> -->
+              <!-- path: myfile.name    TO ADD THE SUBMIT FILE SECTION-->
+
+
+              
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Post" class="btn btn-primary  py-2 px-5">
+                </div>
+              </div>
+
+  
+            </form>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="col-lg-4">
+            <div class="p-4 mb-3 bg-white">
+              <h3 class="h5 text-black mb-3">Contact Info</h3>
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="#"><span class="__cf_email__" data-cfemail="671e081215020a060e0b2703080a060e094904080a">[email&#160;protected]</span></a></p>
+
+            </div>
+            
+            <div class="p-4 mb-3 bg-white">
+              <h3 class="h5 text-black mb-3">More Info</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
+              <p><a href="#" class="btn btn-primary  py-2 px-4">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2>Subcribe to our Newsletter</h2>
+              <p>Be part of our commitment to diversity and inclusion. Subscribe to receive updates on our initiatives and opportunities. </p>
+              <div class="row d-flex justify-content-center mt-4 mb-4">
+                <div class="col-md-12">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- START footer -->
+    <%- include('layouts/footer'); -%>
+    <!-- END footer -->
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <!-- START scripts -->
+    <%- include('layouts/scripts'); -%>
+    <!-- END scripts -->
+    
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('layouts/header');-%>
+  </head>
+  <body>
+    
+    <!-- START navbar -->
+    <%- include('layouts/navbar'); -%>
+    <!-- END navbar -->
+
+    
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+          <div class="col-md-12 ftco-animate text-center mb-5">
+          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Job Post</span></p>
+            <h1 class="mb-3 bread">Browse Job</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <section class="ftco-section ftco-no-pb bg-light">
+    	<div class="container">
+    		<div class="row justify-content-center mb-4">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Browse Jobs</span>
+            <h2 class="mb-4">Advance Search</h2>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="ftco-search">
+						<div class="row">
+	            <div class="col-md-12 nav-link-wrap">
+		            <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		              <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Find a Job</a>
+
+		              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Find a Candidate</a>
+
+		            </div>
+		          </div>
+		          <div class="col-md-12 tab-wrap">
+		            
+		            <div class="tab-content p-4" id="v-pills-tabContent">
+
+		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+
+
+		              	<form action="getJobs" class="search-job">
+		              		<div class="row no-gutters">
+		              			<div class="col-md mr-md-2">
+		              				<div class="form-group">
+			              				<div class="form-field">
+			              					<div class="icon"><span class="icon-briefcase"></span></div>
+							                <input type="text" class="form-control" placeholder="eg. Garphic. Web Developer">
+							              </div>
+						              </div>
+		              			</div>
+		              			<div class="col-md mr-md-2">
+		              				<div class="form-group">
+		              					<div class="form-field">
+			              					<div class="select-wrap">
+					                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+					                      <select name="" id="" class="form-control">
+					                      	<option value="">Category</option>
+					                      	<option value="">Full Time</option>
+					                        <option value="">Part Time</option>
+					                        <option value="">Freelance</option>
+					                        <option value="">Internship</option>
+					                        <option value="">Temporary</option>
+					                      </select>
+					                    </div>
+							              </div>
+						              </div>
+		              			</div>
+		              			<div class="col-md mr-md-2">
+		              				<div class="form-group">
+		              					<div class="form-field">
+			              					<div class="icon"><span class="icon-map-marker"></span></div>
+							                <input type="text" class="form-control" placeholder="Location">
+							              </div>
+						              </div>
+		              			</div>
+		              			<div class="col-md">
+		              				<div class="form-group">
+		              					<div class="form-field">
+						                	<button type="submit" class="form-control btn btn-primary">Search</button>
+							              </div>
+						              </div>
+		              			</div>
+		              		</div>
+		              	</form>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+		              	<form action="#" class="search-job">
+		              		<div class="row">
+		              			<div class="col-md">
+		              				<div class="form-group">
+			              				<div class="form-field">
+			              					<div class="icon"><span class="icon-user"></span></div>
+							                <input type="text" class="form-control" placeholder="eg. Adam Scott">
+							              </div>
+						              </div>
+		              			</div>
+		              			<div class="col-md">
+		              				<div class="form-group">
+		              					<div class="form-field">
+			              					<div class="select-wrap">
+					                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+					                      <select name="" id="" class="form-control">
+					                      	<option value="">Category</option>
+					                      	<option value="">Full Time</option>
+					                        <option value="">Part Time</option>
+					                        <option value="">Freelance</option>
+					                        <option value="">Internship</option>
+					                        <option value="">Temporary</option>
+					                      </select>
+					                    </div>
+							              </div>
+						              </div>
+		              			</div>
+
+		              		</div>
+		              	</form>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+    		</div>
+    	</div>
+    </section>
+
+
+
+
+
+	<% for (var i = 0; i < jobs.length; i++) { %>     
+		<div class="col-md-12 ftco-animate">
+			<div class="job-post-item p-4 d-block d-lg-flex align-items-center">
+				<div class="one-third mb-4 mb-md-0">
+					<div class="job-post-item-header align-items-center">
+						<!-- Working model and job type -->
+						<span class="subadge"><span class="icon-layers"></span> <%= jobs[i].workingmodel %> - <%= jobs[i].jobtype %></span> 
+						<!-- Company name -->
+						<h2 class="mr-3 text-black"><a href="#"><%= jobs[i].title %></a></h2>
+					</div>
+					<div class="job-post-item-body d-block d-md-flex">
+						<!-- Company name -->
+						<div class="mr-3"><span class="icon-layers"></span> <a href="#"><%= jobs[i].company %></a></div>
+						<!-- Location -->
+						<div class="mr-3"><span class="icon-my_location"></span> <span><%= jobs[i].location %></span></div>
+						<!-- Salary -->
+						<div><span class="icon-dollar"></span> <%= jobs[i].salary %></div>
+					</div>
+					<!-- Description -->
+					<div class="job-post-item-description">
+						<p style="white-space: pre-line;"><a href="#" style="color: black;"><%= jobs[i].description %></a></p>
+					</div>
+				</div>
+	
+				<div class="one-forth ml-auto d-flex align-items-center mt-4 md-md-0">
+					<div>
+						<a href="#" class="icon text-center d-flex justify-content-center align-items-center icon mr-2">
+							<span class="icon-heart"></span>
+						</a>
+					</div>
+					<a href="job-single.html" class="btn btn-primary py-2">Apply Job</a>
+				</div>
+			</div>
+		</div><!-- end -->
+	<% } %>
+	
+
+		        </div>
+
+		        <div class="row mt-5">
+		          <div class="col text-center">
+		            <div class="block-27">
+		              <ul>
+		                <li><a href="#">&lt;</a></li>
+		                <li class="active"><span>1</span></li>
+		                <li><a href="#">2</a></li>
+		                <li><a href="#">3</a></li>
+		                <li><a href="#">4</a></li>
+		                <li><a href="#">5</a></li>
+		                <li><a href="#">&gt;</a></li>
+		              </ul>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		
+
+
+				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+				<h2>Subcribe to our Newsletter</h2>
+				<p>Be part of our commitment to diversity and inclusion. Subscribe to receive updates on our initiatives and opportunities. </p>
+				<div class="row d-flex justify-content-center mt-4 mb-4">
+                <div class="col-md-12">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- START footer -->
+    <%- include('layouts/footer'); -%>
+    <!-- END footer -->
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <!-- START scripts -->
+    <%- include('layouts/scripts'); -%>
+    <!-- END scripts -->
+    
+  </body>
+</html>

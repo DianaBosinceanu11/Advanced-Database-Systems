@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('layouts/header');-%>
+  </head>
+  <body>
+    
+    <!-- START navbar -->
+    <%- include('layouts/navbar'); -%>
+    <!-- END navbar -->
+    
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+          <div class="col-md-12 ftco-animate text-center mb-5">
+          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Update Profile</span></p>
+            <h1 class="mb-3 bread">Update you Profile</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+		<section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row">
+       
+          <div class="col-md-12 col-lg-8 mb-5">
+          
+
+
+
+
+
+            <form action="userUpdateProfile" method="post" class="p-5 bg-white" enctype="multipart/form-data">
+              
+
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">First Name</label>
+                  <input type="text" id="fname" class="form-control" placeholder="eg. Michal">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Surname Name</label>
+                  <input type="text" id="lname" class="form-control" placeholder="eg. Smith">
+                </div>
+              </div>
+
+              <div class="row form-group mb-5">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname">Current Position</label>
+                  <input type="text" id="currentjob" class="form-control" placeholder="Senior Java Developer">
+                </div>
+              </div>
+
+
+
+
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>Location</h3></div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <input type="text" id="location" class="form-control" placeholder="Poland, Warsaw">
+                </div>
+              </div>
+
+              <div class="row form-group mb-4">
+                <div class="col-md-12"><h3>Short Summary About Yourself</h3></div>
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <input type="text" id="summary" class="form-control" placeholder="In my current role, I leverage my skills in industrial sales, technology recruitment, and recruiting to research and understand the local market, source and identify candidates, screen resumes, manage the recruitment and selection process, and provide feedback.">
+                </div>
+              </div>
+
+
+              <div class="picture">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="myfile">Attach your Picture</label>
+                  <input type="file" id="myfile" name="myfile" placeholder="image" />
+                </div>
+
+
+                <!--
+                <div class="row form-group mb-5">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="font-weight-bold" for="cv">Attach your CV</label>
+                    <input type="file" id="cv" name="cv" class="form-control-file" accept=".pdf, .doc, .docx" required>
+                    <small class="form-text text-muted">Please attach your CV in PDF or Word format.</small>
+                  </div>
+                </div>
+              -->
+
+              
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Post" class="btn btn-primary  py-2 px-5">
+                </div>
+              </div>
+
+  
+            </form>
+          </div>
+
+
+
+
+
+
+
+    <!-- START footer -->
+    <%- include('layouts/footer'); -%>
+    <!-- END footer -->
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <!-- START scripts -->
+    <%- include('layouts/scripts'); -%>
+    <!-- END scripts -->
+    
+  </body>
+</html>
